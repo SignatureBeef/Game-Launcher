@@ -107,9 +107,8 @@ namespace TLauncher
             };
 
             foreach (string nItem in new string[] { Title, Author, Description, "", Hash })
-            {
                 item.SubItems.Add(nItem);
-            }
+
             MainUI.lv_Items.Items.Add(item);
         }
 

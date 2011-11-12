@@ -35,11 +35,11 @@ namespace TLauncher
         public static bool operator !=(HashedFiles f1, HashedFiles f2)
         {
             return
-                f1.AssemblyPath != f2.AssemblyPath &&
-                f1.Hash != f2.Hash &&
-                f1.Title != f2.Title &&
-                f1.Description != f2.Description &&
-                f1.Identifier != f2.Identifier &&
+                f1.AssemblyPath != f2.AssemblyPath ||
+                f1.Hash != f2.Hash ||
+                f1.Title != f2.Title ||
+                f1.Description != f2.Description ||
+                f1.Identifier != f2.Identifier ||
                 f1.Author != f2.Author;
         }
 

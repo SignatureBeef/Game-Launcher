@@ -1,0 +1,9 @@
+E:\TLauncher\TLauncher\bin\Debug\TLauncher.exe
+E:\TLauncher\TLauncher\bin\Debug\TLauncher.pdb
+E:\TLauncher\TLauncher\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.exe
+E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.pdb
+E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.Forms.MainUI.resources
+E:\TLauncher\TLauncher\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\TLauncher\TLauncher\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.Forms.GenHash.resources

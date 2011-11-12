@@ -11,7 +11,7 @@ Untested, But it should be also possible for any game to be launched like this, 
 Usage
 -------------
 
-To use TLauncher download the executable 'TLauncher.exe' in the bin directory and place in the Steam folder as Terraria.exe.
+To use TLauncher download the executable 'TLauncher.exe' in the 'TLauncher/bin/Debug'  directory and place in the Steam folder as Terraria.exe.
 Some mods will require Terraria to be a certain name, so be sure to rename it accordingly. But most times if coded correctly it should search for the asembly itself.
 Next you would want to start Terraria through steam, and wait for the GUI to start.
 

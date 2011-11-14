@@ -10,9 +10,10 @@ using System.Threading;
 
 namespace TLauncher
 {
-    public struct HashedFiles 
+    public struct HashedFiles
     {
         public string AssemblyPath  { get; set; }
+        public string GLIPath       { get; set; }
         public string Hash          { get; set; }
         public string Title         { get; set; }
         public string Description   { get; set; }
@@ -114,7 +115,8 @@ namespace TLauncher
                             Identifier = _Identifier,
                             Title = AssemblyManagement.GetTitle(assembly),
                             Description = AssemblyManagement.GetDescription(assembly),
-                            Author = AssemblyManagement.GetAuthor(assembly)
+                            Author = AssemblyManagement.GetAuthor(assembly),
+                            GLIPath = file
                         });
 
                         assembly = null;

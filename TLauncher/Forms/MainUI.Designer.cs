@@ -43,6 +43,7 @@
             this.tsLbl_File = new System.Windows.Forms.ToolStripDropDownButton();
             this.generateFileHashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Clm_GliFile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ts_Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.Cml_Author,
             this.Clm_Desc,
             this.Clm_Launch,
-            this.Clm_Hash});
+            this.Clm_Hash,
+            this.Clm_GliFile});
             this.lv_Items.FullRowSelect = true;
             this.lv_Items.GridLines = true;
             this.lv_Items.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -67,6 +69,7 @@
             this.lv_Items.UseCompatibleStateImageBehavior = false;
             this.lv_Items.View = System.Windows.Forms.View.Details;
             this.lv_Items.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            this.lv_Items.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lv_Items_KeyUp);
             // 
             // Clm_Identifier
             // 
@@ -139,6 +142,11 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // Clm_GliFile
+            // 
+            this.Clm_GliFile.Text = "";
+            this.Clm_GliFile.Width = 0;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,6 +179,7 @@
         private System.Windows.Forms.ToolStripDropDownButton tsLbl_File;
         private System.Windows.Forms.ToolStripMenuItem generateFileHashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader Clm_GliFile;
 
     }
 }

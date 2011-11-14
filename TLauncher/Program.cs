@@ -90,7 +90,7 @@ namespace TLauncher
                 MainUI = new MainUI();
 
                 foreach (HashedFiles file in FileManagement.Hashes)
-                    AddItem(file.Identifier, file.Title, file.Author, file.Description, file.Hash);
+                    AddItem(file.Identifier, file.Title, file.Author, file.Description, file.Hash, file.GLIPath);
 
                 MainUI.ProcessChecker.Enabled = true;
                 MainUI.ProcessChecker.Start();
@@ -99,14 +99,14 @@ namespace TLauncher
             }
         }
 
-        public static void AddItem(string Identifier, string Title, string Author, string Description, string Hash)
+        public static void AddItem(string Identifier, string Title, string Author, string Description, string Hash, string GLI)
         {
             ListViewItem item = new ListViewItem()
             {
                 Text = Identifier
             };
 
-            foreach (string nItem in new string[] { Title, Author, Description, "", Hash })
+            foreach (string nItem in new string[] { Title, Author, Description, "", Hash, GLI })
                 item.SubItems.Add(nItem);
 
             MainUI.lv_Items.Items.Add(item);

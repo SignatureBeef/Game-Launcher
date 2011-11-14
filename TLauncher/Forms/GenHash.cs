@@ -58,6 +58,7 @@ namespace TLauncher.Forms
 
                     Assembly assembly = AssemblyManagement.GetAssembly(file);
                     string _Hash = FileManagement.HashBytes(File.ReadAllBytes(file));
+                    string fileName = FileManagement.IncrementFile(Title + ".gli");
 
                     HashedFiles hashFile = new HashedFiles()
                     {
@@ -66,12 +67,12 @@ namespace TLauncher.Forms
                         Identifier = Title,
                         Title = AssemblyManagement.GetTitle(assembly),
                         Description = AssemblyManagement.GetDescription(assembly),
-                        Author = AssemblyManagement.GetAuthor(assembly)
+                        Author = AssemblyManagement.GetAuthor(assembly),
+                        GLIPath = fileName
                     };
                     FileManagement.Hashes.Add(hashFile);
                     assembly = null;
 
-                    string fileName = FileManagement.IncrementFile(Title + ".gli");
                     string[] Content =  { 
                                         Title,
                                         _Hash,
@@ -79,7 +80,7 @@ namespace TLauncher.Forms
                                     };
                     File.WriteAllLines(fileName, Content);
 
-                    Program.AddItem(Title, hashFile.Title, hashFile.Author, hashFile.Description, _Hash);
+                    Program.AddItem(Title, hashFile.Title, hashFile.Author, hashFile.Description, _Hash, fileName);
                 }
                 else
                     Notify.Message("File Error", "Please select a existing file!");
@@ -99,7 +100,7 @@ namespace TLauncher.Forms
             if (AssemblyManagement.IsValidAssembly(file))
                 return true;
             else
-                Notify.Message("Generate Issue", "Please select a Valid Assembly.\n\n(Also make sute it is not in use.)");
+                Notify.Message("Generate Issue", "Please select a Valid Assembly.\n\n(Also make sure it is not in use.)");
 
             return false;
         }

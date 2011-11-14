@@ -68,5 +68,32 @@ namespace TLauncher.Forms
 
             GenHashForm.ShowDialog();
         }
+
+        private void lv_Items_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                ListView lv = sender as ListView;
+                ListViewItem item = lv.SelectedItems[0];
+                string Hash = item.SubItems[5].Text;
+
+                HashedFiles file;
+                if (FileManagement.TryGetHashedFile(Hash, out file) && File.Exists(file.GLIPath))
+                {
+                    try
+                    {
+                        File.Delete(file.GLIPath);
+                        FileManagement.Hashes.Remove(file);
+                        lv_Items.Items.Remove(item);
+                    }
+                    catch
+                    {
+                        Notify.Message("File Error", "It seems there was an issue deleting the selected GLI.");
+                    }
+                }
+                else
+                    Notify.Message("File Issue", "It seems there was an issue finding the GLI.");
+            }
+        }
     }
 }

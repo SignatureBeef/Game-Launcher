@@ -47,6 +47,12 @@
   <ItemGroup>
     <Compile Include="AssemblyManagement.cs" />
     <Compile Include="FileManagement.cs" />
+    <Compile Include="Forms\FileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileList.Designer.cs">
+      <DependentUpon>FileList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GenHash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FileList.resx">
+      <DependentUpon>FileList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GenHash.resx">
       <DependentUpon>GenHash.cs</DependentUpon>
     </EmbeddedResource>

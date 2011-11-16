@@ -37,13 +37,14 @@
             this.Clm_Desc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Clm_Launch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Clm_Hash = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Clm_GliFile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProcessChecker = new System.Windows.Forms.Timer(this.components);
             this.tt_listB = new System.Windows.Forms.ToolTip(this.components);
             this.ts_Header = new System.Windows.Forms.ToolStrip();
             this.tsLbl_File = new System.Windows.Forms.ToolStripDropDownButton();
             this.generateFileHashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Clm_GliFile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.fileListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +101,11 @@
             this.Clm_Hash.Text = "Hash";
             this.Clm_Hash.Width = 0;
             // 
+            // Clm_GliFile
+            // 
+            this.Clm_GliFile.Text = "";
+            this.Clm_GliFile.Width = 0;
+            // 
             // ProcessChecker
             // 
             this.ProcessChecker.Interval = 2000;
@@ -121,6 +127,7 @@
             this.tsLbl_File.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsLbl_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generateFileHashToolStripMenuItem,
+            this.fileListToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.tsLbl_File.Image = ((System.Drawing.Image)(resources.GetObject("tsLbl_File.Image")));
             this.tsLbl_File.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -142,10 +149,12 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // Clm_GliFile
+            // fileListToolStripMenuItem
             // 
-            this.Clm_GliFile.Text = "";
-            this.Clm_GliFile.Width = 0;
+            this.fileListToolStripMenuItem.Name = "fileListToolStripMenuItem";
+            this.fileListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.fileListToolStripMenuItem.Text = "File List";
+            this.fileListToolStripMenuItem.Click += new System.EventHandler(this.fileListToolStripMenuItem_Click);
             // 
             // MainUI
             // 
@@ -154,7 +163,8 @@
             this.ClientSize = new System.Drawing.Size(600, 352);
             this.Controls.Add(this.ts_Header);
             this.Controls.Add(this.lv_Items);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "MainUI";
             this.Text = "Terraria Launcher";
             this.ts_Header.ResumeLayout(false);
@@ -180,6 +190,7 @@
         private System.Windows.Forms.ToolStripMenuItem generateFileHashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader Clm_GliFile;
+        private System.Windows.Forms.ToolStripMenuItem fileListToolStripMenuItem;
 
     }
 }

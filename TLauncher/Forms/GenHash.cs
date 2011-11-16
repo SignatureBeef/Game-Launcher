@@ -73,11 +73,13 @@ namespace TLauncher.Forms
                     FileManagement.Hashes.Add(hashFile);
                     assembly = null;
 
-                    string[] Content =  { 
-                                        Title,
-                                        _Hash,
-                                        file
-                                    };
+                    string[] Content =  
+                    {
+                        Title,
+                        _Hash,
+                        file
+                    };
+
                     File.WriteAllLines(fileName, Content);
 
                     Program.AddItem(Title, hashFile.Title, hashFile.Author, hashFile.Description, _Hash, fileName);

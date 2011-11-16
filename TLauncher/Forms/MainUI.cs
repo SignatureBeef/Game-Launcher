@@ -14,7 +14,8 @@ namespace TLauncher.Forms
     public partial class MainUI : Form
     {
         Dictionary<Int32, Int32> ProcessIDs = new Dictionary<Int32, Int32>();
-        GenHash GenHashForm { get; set; }
+        GenHash  GenHashForm     { get; set; }
+        FileList FileListForm    { get; set; }
 
         public MainUI()
         {
@@ -94,6 +95,14 @@ namespace TLauncher.Forms
                 else
                     Notify.Message("File Issue", "It seems there was an issue finding the GLI.");
             }
+        }
+
+        private void fileListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (FileListForm == null)
+                FileListForm = new FileList();
+
+            FileListForm.ShowDialog();
         }
     }
 }

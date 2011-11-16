@@ -7,3 +7,4 @@ E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.Forms.MainUI.resources
 E:\TLauncher\TLauncher\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\TLauncher\TLauncher\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.Forms.GenHash.resources
+E:\TLauncher\TLauncher\obj\x86\Debug\TLauncher.Forms.FileList.resources
